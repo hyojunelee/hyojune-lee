@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hyojune Lee</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- UnifrakturMaguntia 폰트 적용 -->
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --mobile-scale: 1.4;
+      --mobile-padding-offset: 0.64;
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+    }
+    body {
+      min-height: 100vh;
+      margin: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .center-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: calc(100vh - 20px);
+    }
+    .main-link {
+      font-size: 12rem;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.85);
+      font-family: 'UnifrakturMaguntia', serif;
+      font-style: normal;
+      line-height: 0.75;
+      letter-spacing: 0;
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      transition: color 0.1s ease-out;
+      cursor: pointer;
+      word-break: keep-all;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .main-link:hover,
+    .main-link:focus {
+      color: #00ff12;
+      transition: color 0.1s ease-out;
+    }
+    @media (max-width: 900px) {
+      .main-link {
+        font-size: 5.75rem;
+      }
+      .center-container {
+        height: calc(100vh / var(--mobile-scale) - 20px * var(--mobile-padding-offset));
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="center-container">
+    <a class="main-link" href="mailto:info@hyojunelee.com">
+      A Way to Build Something...
+    </a>
+  </div>
+</body>
+</html>
