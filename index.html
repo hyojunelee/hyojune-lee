@@ -30,8 +30,8 @@
       min-height: 100vh;
     }
     .stroke-box {
-      border-top: 0.5px solid #000;
-      border-bottom: 0.5px solid #000;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
       border-left: none;
       border-right: none;
       padding: 100px;
@@ -39,11 +39,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      opacity: 0;
-      transition: opacity 1.2s ease;
-    }
-    body.loaded .stroke-box {
-      opacity: 1;
     }
     .main-paragraph {
       font-size: 20px;
@@ -58,7 +53,6 @@
       max-width: 700px;
       margin: 0 auto;
       box-sizing: border-box;
-      /* opacity/transition 삭제 가능 */
     }
     .main-link{ 
       color: #000;
@@ -108,12 +102,5 @@
       </p>
     </div>
   </div>
-  <script>
-    window.addEventListener('DOMContentLoaded', function() {
-      setTimeout(function() {
-        document.body.classList.add('loaded');
-      }, 10);
-    });
-  </script>
 </body>
 </html>
