@@ -50,10 +50,10 @@
       opacity: 0;
       transition: opacity 1s ease;
     }
-      body.loaded .main-paragraph {
+    body.loaded .main-paragraph {
       opacity: 1;
-      }
-      .main-link{ 
+    }
+    .main-link{ 
       color: #fff;
       text-decoration: none;
       transition: color 0.1s ease-out;
@@ -93,5 +93,10 @@
       <a class="main-link" href="https://www.instagram.com/hyojune_lee/" target="_blank" rel="noopener">Instagram</a> for the latest updates.
     </p>
   </div>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      document.body.classList.add('loaded');
+    });
+  </script>
 </body>
 </html>
