@@ -29,6 +29,14 @@
       box-sizing: border-box;
       min-height: 100vh;
     }
+    .stroke-box {
+      border: 1.33px solid #fff; /* 1pt = 1.33px */
+      padding: 60px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     .main-paragraph {
       font-size: 20px;
       font-weight: 400;
@@ -43,7 +51,7 @@
       margin: 0 auto;
       box-sizing: border-box;
       opacity: 0;
-      transition: opacity 1.2s ease-out;
+      transition: opacity 1.2s ease;
     }
     body.loaded .main-paragraph {
       opacity: 1;
@@ -57,7 +65,7 @@
     }
     .main-link:hover,
     .main-link:focus {
-      color: #00ff12;
+      color: #ff0000;
       transition: color 0.1s ease-out;
     }
     ::selection {
@@ -69,31 +77,38 @@
         font-size: 18px;
         max-width: 95vw;
       }
+      .stroke-box {
+        padding: 30px;
+      }
       .center-container {
         min-height: 60vh;
       }
     }
     @media (max-width: 600px) {
       .main-paragraph {
-        font-size: 18px;
+        font-size: 16px;
+      }
+      .stroke-box {
+        padding: 15px;
       }
     }
   </style>
 </head>
 <body>
   <div class="center-container">
-    <p class="main-paragraph">
-      Hyojune Lee is a Seoul-based graphic designer offering creative solutions in visual identity, publications, wayfinding, and websites for cultural institutions, brands, and artists. For inquiries, please contact 
-      <a class="main-link" href="mailto:info@hyojunelee.com">info@hyojunelee.com</a>, and visit 
-      <a class="main-link" href="https://www.instagram.com/hyojune_lee/" target="_blank" rel="noopener">Instagram</a> for the latest updates.
-    </p>
+    <div class="stroke-box">
+      <p class="main-paragraph">
+        Hyojune Lee is a Seoul-based graphic designer offering creative solutions in visual identity, publications, wayfinding, and websites for cultural institutions, brands, and artists. For inquiries, please contact 
+        <a class="main-link" href="mailto:info@hyojunelee.com">info@hyojunelee.com</a>, and visit 
+        <a class="main-link" href="https://www.instagram.com/hyojune_lee/" target="_blank" rel="noopener">Instagram</a> for the latest updates.
+      </p>
+    </div>
   </div>
   <script>
-    // body에 loaded 클래스 추가
     window.addEventListener('DOMContentLoaded', function() {
       setTimeout(function() {
         document.body.classList.add('loaded');
-      }, 10); // 약간의 지연을 주면 transition이 더 확실하게 동작합니다.
+      }, 10);
     });
   </script>
 </body>
