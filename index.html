@@ -5,12 +5,7 @@
   <title>Hyojune Lee</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --mobile-scale: 1.4;
-      --mobile-padding-offset: 0.64;
-    }
     html, body {
       height: 100%;
       margin: 0;
@@ -75,7 +70,7 @@
         max-width: 95vw;
       }
       .center-container {
-        min-height: calc(100vh / var(--mobile-scale) - 20px * var(--mobile-padding-offset));
+        min-height: 60vh;
       }
     }
     @media (max-width: 600px) {
@@ -94,8 +89,11 @@
     </p>
   </div>
   <script>
+    // body에 loaded 클래스 추가
     window.addEventListener('DOMContentLoaded', function() {
-      document.body.classList.add('loaded');
+      setTimeout(function() {
+        document.body.classList.add('loaded');
+      }, 10); // 약간의 지연을 주면 transition이 더 확실하게 동작합니다.
     });
   </script>
 </body>
