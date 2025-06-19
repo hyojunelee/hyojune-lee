@@ -39,6 +39,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      opacity: 0;
+      transition: opacity 1.2s ease;
+    }
+    body.loaded .stroke-box {
+      opacity: 1;
     }
     .main-paragraph {
       font-size: 20px;
@@ -53,11 +58,7 @@
       max-width: 700px;
       margin: 0 auto;
       box-sizing: border-box;
-      opacity: 0;
-      transition: opacity 1.2s ease;
-    }
-    body.loaded .main-paragraph {
-      opacity: 1;
+      /* opacity/transition 삭제 가능 */
     }
     .main-link{ 
       color: #fff;
