@@ -5,7 +5,6 @@
   <title>Hyojune Lee</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- UnifrakturMaguntia 폰트 적용 -->
   <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -15,13 +14,13 @@
     html, body {
       height: 100%;
       margin: 0;
-      padding: 10;
+      padding: 0;
       background: #fff;
-      overflow: hidden; /* ← 추가 */
+      overflow: hidden;
     }
     body {
       min-height: 100vh;
-      margin: 0px;
+      margin: 0;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -36,25 +35,26 @@
       box-sizing: border-box;
       height: calc(100vh - 20px);
     }
-    .main-link {
-      font-size: 12rem;
+    .main-paragraph {
+      font-size: 20px;
       font-weight: 400;
       color: rgba(0, 0, 0, 0.85);
       font-family: "TimesNewRoman", Times, serif;
       font-style: normal;
-      line-height: 0.75;
+      line-height: 1.5;
       letter-spacing: 0;
       display: block;
-      text-align: center;
-      text-decoration: none;
+      text-align: left;
+      max-width: 700px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+    .main-link {
+      color: rgba(0, 0, 0, 0.85);
+      text-decoration: underline;
       transition: color 0.1s ease-out;
       cursor: pointer;
-      word-break: normal; 
-      overflow-wrap: normal;
-      white-space: normal;
-      width: 100%;
-      box-sizing: border-box;
-      -webkit-tap-highlight-color: transparent;
+      font-weight: 500;
     }
     .main-link:hover,
     .main-link:focus {
@@ -62,25 +62,28 @@
       transition: color 0.1s ease-out;
     }
     @media (max-width: 900px) {
-      .main-link {
-        font-size: 4.5rem;
+      .main-paragraph {
+        font-size: 16px;
+        max-width: 95vw;
       }
-      (max-width: 600px) {
-  .main-link {
-    font-size: 3.5rem;
-  }
-}
       .center-container {
         height: calc(100vh / var(--mobile-scale) - 20px * var(--mobile-padding-offset));
+      }
+    }
+    @media (max-width: 600px) {
+      .main-paragraph {
+        font-size: 14px;
       }
     }
   </style>
 </head>
 <body>
   <div class="center-container">
-    <a class="main-link" href="mailto:info@hyojunelee.com">
-      To Build Something…
-    </a>
+    <p class="main-paragraph">
+      Hyojune Lee is a Seoul-based graphic designer offering creative solutions in visual identity, publications, wayfinding, and websites for cultural institutions, brands, and artists. For inquiries, please contact 
+      <a class="main-link" href="mailto:info@hyojunelee.com">info@hyojunelee.com</a>, and visit 
+      <a class="main-link" href="https://www.instagram.com/hyojune_lee/" target="_blank" rel="noopener">@hyojune_lee</a> on social media.
+    </p>
   </div>
 </body>
 </html>
