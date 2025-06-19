@@ -16,7 +16,6 @@
       margin: 0;
       padding: 0;
       background: #000;
-      overflow: hidden;
     }
     body {
       min-height: 100vh;
@@ -33,7 +32,7 @@
       padding-left: 10px;
       padding-right: 10px;
       box-sizing: border-box;
-      height: calc(100vh - 20px);
+      min-height: 100vh;
     }
     .main-paragraph {
       font-size: 20px;
@@ -76,7 +75,7 @@
         max-width: 95vw;
       }
       .center-container {
-        height: calc(100vh / var(--mobile-scale) - 20px * var(--mobile-padding-offset));
+        min-height: calc(100vh / var(--mobile-scale) - 20px * var(--mobile-padding-offset));
       }
     }
     @media (max-width: 600px) {
